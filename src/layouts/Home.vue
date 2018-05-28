@@ -1,25 +1,8 @@
 <template>
 	<div>
-		<button class="ui primary button" v-on:click="showModal">Open modal</button>
-		<modal></modal>
+		<h2 class="ui center aligned icon header">
+			<i class="circular users icon"></i>
+			Welcome to Vue JS App
+		</h2>
 	</div>
 </template>
-
-<script>
-
-import Modal from './../components/Modal'
-
-export default {
-	components : { Modal },
-	data() {
-		return {
-
-		}
-	},
-	methods: {
-		showModal() {
-			$('ui.modal').modal('show')
-		}
-	}
-}
-</script>

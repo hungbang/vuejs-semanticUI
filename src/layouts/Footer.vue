@@ -1,9 +1,11 @@
 <template>
-	<div class="ui bottom attached button">VueJS + Semantic</div>
+	<div class="ui bottom attached button">
+		{{ title }}
+	</div>
 </template>
 
 <script>
-	export default {
-		
+	module.exports = {
+		props: ['title']
 	}
 </script>

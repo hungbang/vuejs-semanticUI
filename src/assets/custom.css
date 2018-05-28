@@ -30,3 +30,7 @@ footer {
 
 table tr td span.block-button { display:none;}
 table tr:hover td span.block-button { display:block;}
+
+.float-right {
+    float: right !important
+}

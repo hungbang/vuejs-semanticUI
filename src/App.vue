@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <div class="ui container">
-            <app-header></app-header>
+            <app-header :title="header"></app-header>
             <br>
 
             <div class="ui grid">
@@ -14,7 +14,7 @@
             </div>
 
             <br>
-            <app-footer></app-footer>
+            <app-footer :title="footer"></app-footer>
         </div>
     </div>
 </template>
@@ -35,7 +35,8 @@ export default {
     },
     data () {
         return {
-            msg: 'Welcome to Your Vue.js App'
+            header: 'Welcome to Your Vue.js App',
+            footer : 'VueJS + SemanticUI'
         }
     }
 }
