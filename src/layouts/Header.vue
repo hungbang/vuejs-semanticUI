@@ -1,5 +1,5 @@
 <template>
-	<div class="ui bottom attached button">VueJS + Semantic</div>
+	<div class="ui top attached button">VueJS + Semantic</div>
 </template>
 
 <script>

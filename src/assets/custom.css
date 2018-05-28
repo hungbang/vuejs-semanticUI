@@ -24,12 +24,9 @@ footer {
     }
 }
 
-.list-group li:hover,
-.list-group li.router-link-active,
-.list-group li.router-link-exact-active {
-   background-color: #8DDF69;
-   cursor: pointer;
+.router-link-exact-active.router-link-active {
+    background-color: #ccc;
 }
 
-table.table-name tr td span.button { display:none;}
-table.table-name tr:hover td span.button { display:block;}
+table tr td span.block-button { display:none;}
+table tr:hover td span.block-button { display:block;}

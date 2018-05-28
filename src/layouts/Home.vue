@@ -1,13 +1,25 @@
 <template>
 	<div>
-		<h4>HOME PAGE</h4>
-		<hr>
-		<p>Chào mừng đến với Vue App</p>
+		<button class="ui primary button" v-on:click="showModal">Open modal</button>
+		<modal></modal>
 	</div>
 </template>
 
 <script>
-	export default {
 
+import Modal from './../components/Modal'
+
+export default {
+	components : { Modal },
+	data() {
+		return {
+
+		}
+	},
+	methods: {
+		showModal() {
+			$('ui.modal').modal('show')
+		}
 	}
+}
 </script>
