@@ -25,7 +25,6 @@ import Sidebar from './layouts/Sidebar'
 import Footer from './layouts/Footer'
 
 export default {
-    name: 'app',
     components : {
         'app-header' : Header,
         'app-sidebar' : Sidebar,

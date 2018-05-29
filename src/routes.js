@@ -5,7 +5,7 @@ import AddUser from './pages/AddUser'
 
 export default [
 	{
-		name : 'home',
+		name : 'app',
 		path : '/',
 		component : App,
 		children: [
@@ -21,7 +21,7 @@ export default [
 			},
 			{
 				name : 'adduser',
-				path : 'adduser',
+				path : 'user/adduser',
 				component : AddUser
 			},
 		]
