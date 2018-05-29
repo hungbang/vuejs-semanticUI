@@ -7,13 +7,27 @@ import VueSweetalert2 from 'vue-sweetalert2'
 Vue.use(VueRouter)
 Vue.use(VueSweetalert2)
 
+import NProgress from 'nprogress';
+import '../node_modules/nprogress/nprogress.css'
+
 const router = new VueRouter({
 	routes : Routes,
 	mode: 'history'
 })
 
+router.beforeResolve((to, from, next) => {
+	if (to.name) {
+		NProgress.start()
+	}
+	next()
+})
+
+router.afterEach(() => {
+	NProgress.done()
+})
+
 new Vue({
-  el: '#app',
-  render: h => h(App),
-  router: router
+	el: '#app',
+	render: h => h(App),
+	router: router
 })
