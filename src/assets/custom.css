@@ -34,3 +34,7 @@ table tr:hover td span.block-button { display:block;}
 .float-right {
     float: right !important
 }
+
+.has-error {
+    color : red;
+}

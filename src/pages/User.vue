@@ -1,9 +1,11 @@
 <template>
 	<div>
-		<div class="ui teal labeled icon button tiny" v-on:click="create">
-			<i class="add icon"></i>Create
-		</div>
-		<div class="ui red labeled icon button tiny" v-on:click="create">
+		<router-link :to="{ name : 'adduser' }">
+			<div class="ui teal labeled icon button tiny">
+				<i class="add icon"></i>Create
+			</div>
+		</router-link>
+		<div class="ui red labeled icon button tiny">
 			<i class="times icon"></i>Delete
 		</div>
 		<div class="ui action input mini float-right">
@@ -63,13 +65,7 @@ export default {
 			]
 		}
 	},
-	created() {
-		console.log(this.users)
-	},
 	methods: {
-		create() {
-			Vue.swal('Hello Vue world!!!')
-		},
 		deleteItem(id, index) {
 			let self = this
 			Vue.swal({
