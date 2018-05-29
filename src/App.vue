@@ -22,7 +22,6 @@
 <script>
 import Header from './layouts/Header'
 import Sidebar from './layouts/Sidebar'
-import Home from './layouts/Home'
 import Footer from './layouts/Footer'
 
 export default {
@@ -30,7 +29,6 @@ export default {
     components : {
         'app-header' : Header,
         'app-sidebar' : Sidebar,
-        'app-home' : Home,
         'app-footer' : Footer
     },
     data () {

@@ -1,4 +1,5 @@
-import Home from './layouts/Home'
+import App from './App'
+import About from './layouts/About'
 import User from './pages/User'
 import AddUser from './pages/AddUser'
 
@@ -6,16 +7,23 @@ export default [
 	{
 		name : 'home',
 		path : '/',
-		component : Home
-	},
-	{
-		name : 'user',
-		path : '/user',
-		component : User
-	},
-	{
-		name : 'adduser',
-		path : '/user/add',
-		component : AddUser
+		component : App,
+		children: [
+			{
+				name : 'about',
+				path : 'about',
+				component : About,
+			},
+			{
+				name : 'user',
+				path : 'user',
+				component : User
+			},
+			{
+				name : 'adduser',
+				path : 'adduser',
+				component : AddUser
+			},
+		]
 	}
 ]
