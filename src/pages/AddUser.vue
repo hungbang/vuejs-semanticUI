@@ -66,11 +66,21 @@ export default {
 		submit() {
 			this.$validator.validate().then(result => {
 				if (!result) {
-					Vue.swal('Thông báo','Vui lòng nhập đủ thông tin bắt buộc','error')
+					this.$notify({
+						group: 'msg',
+						type : 'warn',
+						title: 'Thông báo',
+						text: 'Vui lòng nhập đủ các trường bắt buộc!'
+					});
 					return
 				}
 				if(!this.checked) {
-					Vue.swal('Thông báo','Vui lòng chấp nhận điều khoản','error')
+					this.$notify({
+						group: 'msg',
+						type : 'warn',
+						title: 'Thông báo',
+						text: 'Vui lòng xác nhận điều khoản!'
+					});
 					return
 				}
 				console.log(this)
