@@ -20,6 +20,7 @@
 </template>
 
 <script>
+
 import Header from './layouts/Header'
 import Sidebar from './layouts/Sidebar'
 import Footer from './layouts/Footer'
