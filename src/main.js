@@ -1,13 +1,17 @@
+import './firebase'
+
 import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 import Routes from './routes.js'
 import VueSweetalert2 from 'vue-sweetalert2'
 import VeeValidate from 'vee-validate'
+import VueFire from 'vuefire'
 
 Vue.use(VueRouter)
 Vue.use(VueSweetalert2)
 Vue.use(VeeValidate)
+Vue.use(VueFire)
 
 import NProgress from 'nprogress';
 import '../node_modules/nprogress/nprogress.css'

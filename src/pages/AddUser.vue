@@ -46,12 +46,10 @@
 <script>
 
 import Vue from 'vue'
-import { db } from '../db.js'
+import { namesRef } from '../firebase'
 
 export default {
-	firebase: {
-		items: db.ref('items')
-	},
+
 	data() {
 		return {
 			name : '',
@@ -61,6 +59,9 @@ export default {
 			checked : false,
 			flag : true
 		}
+	},
+	created() {
+		console.log(namesRef)
 	},
 	methods: {
 		submit() {
@@ -73,15 +74,6 @@ export default {
 					Vue.swal('Thông báo','Vui lòng chấp nhận điều khoản','error')
 					return
 				}
-				console.log(this)
-				this.flag = false
-				this.$firebaseRefs.items.push({
-					name: this.name,
-					birthday: this.birthday
-				})
-				this.name = '';
-				this.birthday = '';
-				this.$router.push('/user')
 			});
 		},
 	}
