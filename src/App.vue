@@ -12,7 +12,7 @@
                     <router-view/>
                 </div>
             </div>
-
+            <notifications group="msg" position="bottom left"/>
             <br>
             <app-footer :title="footer"></app-footer>
         </div>
